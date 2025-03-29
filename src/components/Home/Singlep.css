@@ -1,0 +1,86 @@
+/* Overall container with a background gradient and vertical padding */
+.container {
+    background: linear-gradient(145deg, #f0f5f0, #e5ede5);
+    padding: 40px 0;
+    width: 100%;
+  }
+  
+  /* This container arranges the info section and image side by side */
+  .info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Left info section */
+  .info-section {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+  }
+  
+  /* Main heading styling */
+  .main-heading {
+    font-size: 36px;
+    margin-bottom: 24px;
+    color: #2d4739;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Row wrapping the two benefit columns */
+  .benefits-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Each benefits list (column) */
+  .benefits-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    min-width: 220px;
+  }
+  
+  /* Each individual benefit item */
+  .benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    padding: 15px;
+    border: 1px solid #6b8e23;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  /* Icon styling */
+  .icon {
+    margin-right: 10px;
+    color: #6b8e23;
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  
+  /* Right image section */
+  .image-section {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    margin-top: 20px; /* adds space on smaller screens */
+  }
+  
+  /* Product image styling */
+  .product-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+  }
+  

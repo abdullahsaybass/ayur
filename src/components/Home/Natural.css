@@ -1,0 +1,154 @@
+    .supplements-container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Top Categories (3 cards) */
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .category-card {
+    flex: 1;
+    min-width: 350px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .category-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  /* .icon-containter{
+    display: flex;
+  } */
+  .category-card .icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .category-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .category-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.4;
+  }
+  
+  .category-card.active {
+    border-color: #008080; /* highlight color */
+    background-color: #f0fafa;
+  }
+  
+  /* Main Content Layout */
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .image-container {
+    position: relative;
+    flex: 1;
+    overflow: hidden; /* so we can position badges or buttons */
+    border-radius: 8px;
+  }
+  
+  /* The "25+ Years Experience" badge */
+  .experience-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #008080;
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    z-index: 2;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Play Button (on top of the image) */
+  .play-button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 0.6rem 0.8rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .play-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Text Content */
+  .text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .text-content h5 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #008080;
+  }
+  
+  .text-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: #333;
+  }
+  
+  .text-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    color: #666;
+  }
+  
+  .features p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+  
+  /* RESPONSIVE STYLES */
+  @media (min-width: 768px) {
+    .content {
+      flex-direction: row;
+      gap: 3rem;
+    }
+  }
+  

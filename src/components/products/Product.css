@@ -1,0 +1,83 @@
+/* Container for the product grid */
+.product-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #f5e7d1;
+    padding: 20px;
+  }
+  
+  /* Individual product card */
+  .product-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    
+    text-align: center;
+    width: 350px;
+    position: relative;
+  }
+  
+  /* Sale badge */
+  .sale-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #5a3d2b;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+  
+  /* Product image */
+  .product-image {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  
+  /* Product name */
+  .product-name {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  /* Star rating */
+  .product-rating {
+    color: #f5b50a;
+    font-size: 18px;
+  }
+  
+  /* Price details */
+  .product-price {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: gray;
+    margin-right: 8px;
+  }
+  
+  /* Add to cart button */
+  .add-to-cart {
+    background: white;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  .add-to-cart:hover {
+    background: black;
+    color: white;
+  }
+  

@@ -1,0 +1,87 @@
+/* Container for the entire testimonial section */
+.review-section {
+    background-color: #f8f5f1;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  /* Heading for the testimonial section */
+  .review-heading {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  /* Container for all review cards */
+  .review-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* centers the cards horizontally */
+    gap: 20px;              /* space between cards */
+  }
+  
+  /* Individual review card */
+  .review-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 250px;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  /* Top section of the card with avatar and name */
+  .review-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  /* Avatar image styling */
+  .review-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+  }
+  
+  /* Info section (name, stars, date) */
+  .review-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Name styling */
+  .review-name {
+    font-size: 16px;
+    margin: 0 0 4px;
+    color: #333;
+  }
+  
+  /* Container for star icons */
+  .review-stars {
+    display: flex;
+    color: #f5b50a; /* star color */
+    margin-bottom: 4px;
+  }
+  
+  /* Star icon styling */
+  .star-icon {
+    margin-right: 2px;
+  }
+  
+  /* Date styling */
+  .review-date {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  /* Review text styling */
+  .review-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+    margin: 0;
+  }
+  

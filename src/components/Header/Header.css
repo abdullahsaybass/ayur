@@ -1,0 +1,146 @@
+.header {
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 80px;
+    margin-right: 10px;
+  }
+  
+  .brand-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .nav-links ul li:hover {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .search-bar {
+    position: relative;
+  }
+  
+  .search-bar input {
+    padding: 8px 30px 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+  }
+  
+  .cart-container {
+    position: relative;
+  }
+  
+  .cart-icon {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  .hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+  
+  /* RESPONSIVE DESIGN */
+  
+  /* Hide menu and show hamburger at 1240px */
+  @media (max-width: 1240px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .hamburger-menu {
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  
+    /* When menu is open, show it */
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background: white;
+      width: 100%;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  
+  /* At 760px, show only hamburger & logo, hide search/cart */
+  @media (max-width: 760px) {
+    .right-section {
+      display: none;
+    }
+  
+    .navbar-container {
+      justify-content: space-between;
+      width: 90%;
+    }
+  }
+  
