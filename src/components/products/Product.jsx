@@ -53,7 +53,7 @@ const products = [
 const HomeProduct = () => {
   return (
     <div>
-    <Header />
+   
       <div className="product-grid">
         {products.map((product) => (
           <div key={product.id} className="product-card">
@@ -73,7 +73,7 @@ const HomeProduct = () => {
           </div>
         ))}
       </div>
-    <Footer />
+   
     </div>
   );
 };
