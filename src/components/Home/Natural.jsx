@@ -1,7 +1,6 @@
 import React from "react";
 import "./Natural.css"; // Import the CSS file
 
-
 const SupplementsSection = () => {
   return (
     <div className="supplements-container">
@@ -14,7 +13,7 @@ const SupplementsSection = () => {
                 <p>Boost your immunity with natural supplements.</p>
             </div>
         </div>
-        <div className="category-card active">
+        <div className="category-cards active">
         <div className="category-card">
             <span className="icon">🌿</span>
             <div className="icon-containter">
@@ -36,8 +35,6 @@ const SupplementsSection = () => {
       <div className="content">
         <div className="image-container">
           <div className="experience-badge">25+ Years Experience</div>
-          
-          <div className="play-button">▶</div>
         </div>
         <div className="text-content">
           <h5>Who we are</h5>

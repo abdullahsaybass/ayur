@@ -1,146 +1,188 @@
 .header {
-    background-color: #f8f8f8;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    height: 80px;
-    margin-right: 10px;
-  }
-  
-  .brand-name {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .nav-links ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    font-size: 20px;
-    font-weight: 500;
-    color: #333;
-    cursor: pointer;
-  }
-  
-  .nav-links ul li:hover {
-    color: black;
-    font-weight: bold;
-  }
-  
-  .right-section {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .search-bar {
-    position: relative;
-  }
-  
-  .search-bar input {
-    padding: 8px 30px 8px 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    outline: none;
-  }
-  
-  .search-icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: gray;
-  }
-  
-  .cart-container {
-    position: relative;
-  }
-  
-  .cart-icon {
-    font-size: 20px;
-    color: #333;
-    cursor: pointer;
-  }
-  
-  .cart-count {
-    position: absolute;
-    top: -5px;
-    right: -10px;
-    background-color: red;
-    color: white;
-    font-size: 12px;
-    width: 18px;
-    height: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-  }
-  .hamburger-menu {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-  
-  /* RESPONSIVE DESIGN */
-  
-  /* Hide menu and show hamburger at 1240px */
-  @media (max-width: 1240px) {
-    .nav-links {
-      display: none;
-    }
-  
-    .hamburger-menu {
-      display: block;
-      font-size: 24px;
-      cursor: pointer;
-    }
-  
-    /* When menu is open, show it */
-    .nav-links.open {
+
+/* Center the navbar and set spacing */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 80px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Navigation Links */
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Fix: Remove underline and set color */
+.nav-links ul li a {
+  text-decoration: none; /* Removes underline */
+  color: black; /* Ensures text is black */
+  font-weight: 500;
+}
+
+.nav-links ul li a:hover {
+  color: #333; /* Darker on hover */
+}
+
+/* Right Section (Search & Cart) */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-bar input {
+  padding: 8px 30px 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+}
+
+.cart-container {
+  position: relative;
+}
+
+.cart-icon {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+/* Hamburger menu */
+.hamburger-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1100; /* Ensure it's on top */
+}
+
+/* Hide extra logo on larger screens */
+.menu-logo {
+  display: none;
+}
+
+/* Mobile RESPONSIVENESS */
+@media (max-width: 1240px) {
+  /* Hide default menu, show mobile nav */
+  .nav-links {
+      position: fixed;
+      top: 0;
+      left: -100%; /* Hide offscreen */
+      width: 70%;
+      height: 100vh;
+      background: white;
+      padding: 20px;
       display: flex;
       flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background: white;
-      width: 100%;
-      padding: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-  
-    .nav-links ul {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
+      gap: 20px;
+      transition: left 0.4s ease-in-out; /* Smooth sliding */
+      z-index: 1000;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   }
-  
-  /* At 760px, show only hamburger & logo, hide search/cart */
-  @media (max-width: 760px) {
-    .right-section {
+
+  /* When active, slide in from the left */
+  .nav-links.active {
+      left: 0;
+  }
+
+  /* Align list items properly */
+  .nav-links ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      padding-left: 10px;
+  }
+
+  /* Show the hamburger icon */
+  .hamburger-menu {
+      display: block;
+  }
+
+  /* Move logo inside the menu (for mobile) */
+  .menu-logo {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 5px;
+      margin-top: 25px; /* Move logo below hamburger */
+  }
+
+  .menu-logo img {
+      width: 80px;
+      height: auto;
+  }
+
+  .brand-name {
+      font-size: 18px;
+  }
+}
+
+/* At 760px, hide search/cart and adjust navbar */
+@media (max-width: 760px) {
+  .right-section {
       display: none;
-    }
-  
-    .navbar-container {
+  }
+
+  .navbar-container {
       justify-content: space-between;
       width: 90%;
-    }
   }
-  
+
+  .logo {
+      height: 40px; /* Increase logo size for better visibility */
+      margin-right: 10px;
+  }
+}

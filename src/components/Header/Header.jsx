@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaSearch, FaShoppingCart, FaBars } from "react-icons/fa";
 import "./Header.css";
 import logo from "../../assets/logo-removebg.png";
@@ -23,12 +24,26 @@ const Header = () => {
 
         {/* Navigation */}
         <nav className={menuOpen ? "nav-links active" : "nav-links"}>
+          {/* Logo inside menu (for mobile view) */}
+          <div className="menu-logo">
+            <img src={logo} alt="Logo" className="menu-logo-img" />
+            <span className="brand-name">Green-Gold</span>
+          </div>
+
           <ul>
-            <li>HOME</li>
-            <li>PRPDUCT</li>
-            <li>CONTACT US</li>
-            <li>ABOUT US</li>
-            <li>PAGES</li>
+              <li><Link to="/">HOME</Link></li>
+            <li>
+              <Link to="/product">PRODUCT</Link>
+            </li>
+            <li>
+              <Link to="/contact">CONTACT US</Link>
+            </li>
+            <li>
+              <Link to="/about">ABOUT US</Link>
+            </li>
+            <li>
+              <Link to="/pages">PAGES</Link>
+            </li>
           </ul>
         </nav>
 
@@ -40,7 +55,7 @@ const Header = () => {
           </div>
           <div className="cart-container">
             <FaShoppingCart className="cart-icon" />
-            {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+            <span className="cart-count">{cartCount}</span>
           </div>
         </div>
       </div>

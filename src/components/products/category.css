@@ -17,7 +17,7 @@
     margin-bottom: 30px;
   }
   
-  .filter-buttons button {
+  .filter-buttons button{
     padding: 10px 20px;
     border: 2px solid #4f4f4f;
     background: transparent;
@@ -68,3 +68,29 @@
     font-weight: bold;
   }
   
+  @media (max-width:630px){
+    .shop-categories {
+      
+      background: #f5e7d1;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    
+    .filter-buttons button{
+      padding: 5px 5px;
+      font-size: 14px;
+    }
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+      text-align: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .category-item p{
+      font-size: 14px;
+      font-weight: 500;
+    }
+  } 

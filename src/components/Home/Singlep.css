@@ -1,7 +1,7 @@
 /* Overall container with a background gradient and vertical padding */
 .container {
     background: linear-gradient(145deg, #f0f5f0, #e5ede5);
-    padding: 40px 0;
+    padding: 100px 0;
     width: 100%;
   }
   
@@ -78,9 +78,10 @@
   /* Product image styling */
   .product-image {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
+    height: 700px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    object-fit: cover;
+    /* object-fit: cover; */
   }
   

@@ -1,12 +1,30 @@
-/* Container for the product grid */
+.Powder{
+    height: 400px; /* Full height to fit products */
+    background-color: #f5e6d8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Powdering{
+  background-color: #f8f9fa;
+}
+/* Fix product grid layout */
 .product-grid {
     display: flex;
     gap: 20px;
-    justify-content: center;
     flex-wrap: wrap;
-    background-color: #f5e7d1;
+    background-color: #f8f9fa;
+    margin-top: 20px; /* Prevent overlap with navbar */
     padding: 20px;
-    padding-bottom: 60px;
+    border-radius: 12px;
+}
+.product-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color:  #f8f9fa;
+   
   }
   
   /* Individual product card */
@@ -14,9 +32,7 @@
     background: white;
     border-radius: 12px;
     padding: 16px;
-    
-    text-align: center;
-    width: 350px;
+    width: 400px;
     position: relative;
   }
   

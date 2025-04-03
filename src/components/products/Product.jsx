@@ -4,6 +4,8 @@ import MaxxForMen from '../../assets/1.png';
 import MaxxForWomen from '../../assets/2.png';
 import TestoVital from '../../assets/3.png';
 import HimalayanShilajit from '../../assets/4.png';
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 const products = [
   {
@@ -48,28 +50,32 @@ const products = [
   },
 ];
 
-const ProductCard = () => {
+const HomeProduct = () => {
   return (
-    <div className="product-grid">
-      {products.map((product) => (
-        <div key={product.id} className="product-card">
-          {product.sale && <span className="sale-badge">Sale</span>}
-          <img src={product.image} alt={product.name} className="product-image" />
-          <div className="product-details">
-            <h3 className="product-name">{product.name}</h3>
-            <div className="product-rating">
-              {"★".repeat(product.rating)}{" "}
-              <span className="review-count">({product.reviews})</span>
+    <div>
+    <Header />
+      <div className="product-grid">
+        {products.map((product) => (
+          <div key={product.id} className="product-card">
+            {product.sale && <span className="sale-badge">Sale</span>}
+            <img src={product.image} alt={product.name} className="product-image" />
+            <div className="product-details">
+              <h3 className="product-name">{product.name}</h3>
+              <div className="product-rating">
+                {"★".repeat(product.rating)}{" "}
+                <span className="review-count">({product.reviews})</span>
+              </div>
+              <p className="product-price">
+                <span className="old-price">Rs. {product.oldPrice}</span> Rs. {product.newPrice}
+              </p>
+              <button className="add-to-cart">Add to cart</button>
             </div>
-            <p className="product-price">
-              <span className="old-price">Rs. {product.oldPrice}</span> Rs. {product.newPrice}
-            </p>
-            <button className="add-to-cart">Add to cart</button>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+    <Footer />
     </div>
   );
 };
 
-export default ProductCard;
+export default HomeProduct;

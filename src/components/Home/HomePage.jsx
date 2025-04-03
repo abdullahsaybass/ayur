@@ -3,23 +3,26 @@ import Header from '../Header/Header'
 import Hero from './Hero'
 import SupplementsSection from './Natural'
 import ShopCategories from '../products/category'
+import HomeProduct from '../products/Product'
 import Services from './Aboutus'
 import HerbalProductForm from './Singlep'
 import ReviewSection from './Review'
-import ProductCard from '../products/Product'
-const home = () => {
+import Footer from '../Footer/Footer'
+
+const Home = () => {
   return (
     <div className='home'>
-        <Hero />
+        <Header />
+        <Hero /> 
         <SupplementsSection />
         <ShopCategories />
-        <ProductCard />
+        <HomeProduct />
         <Services />
-       <HerbalProductForm />
-       <ReviewSection/>
-        
+        <HerbalProductForm />
+        <ReviewSection />
+        <Footer />
     </div>
   )
 }
 
-export default home
+export default Home

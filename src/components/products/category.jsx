@@ -23,7 +23,7 @@ const categories = [
   { name: "Tulsi", image: tulsi },
   { name: "Triphala", image: triphala },
   { name: "Turmeric", image: turmeric },
-  { name: "Saffron", image: saffron }
+  { name: "Saffron", }
 ];
 
 const ShopCategories = () => {

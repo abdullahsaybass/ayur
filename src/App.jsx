@@ -1,21 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './components/Header/Header'
-import Hero from './components/Home/Hero'
-import Home from './components/Home/home'
-import Footer from './components/Footer/Footer'
-function App() {
-  
+import { Routes, Route } from "react-router-dom";
+import './App.css';
+import Home from './components/Home/HomePage';
+import Contact from './components/contact/Contact';
+import Product from './components/products/HerbalPowders';
 
+function App() {
   return (
-    <>
-     <Header />
-     <Home />
-     <Footer />
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/product" element={<Product />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
